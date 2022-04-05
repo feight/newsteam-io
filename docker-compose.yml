@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+
+  app:
+    build:
+      context: .
+      target: dev
+    container_name: app
+    # environment:
+    #   PORT: "8080"
+    ports:
+      - 3000:3000
+      - 3001:3001
+      - 9229:9229
+    volumes:
+      - ./service-account.json:/app/modules/api/service-account.json:ro
+      - ./modules/console/src:/app/modules/console/src:ro
+      - ./modules/api/src:/app/modules/api/src:ro
+      - ./data:/app/modules/api/data
