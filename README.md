@@ -15,7 +15,11 @@
 
 ## Pull from Dockerhub:
 
+```
+
 docker run --rm \
     -v ~/Workspace/newsteam-io/service-account.json:/app/modules/api/service-account.json \
     -p 3000:3000 \
     dgroux/newsteam-io:latest
+
+```
